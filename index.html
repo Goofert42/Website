@@ -28,9 +28,49 @@
                 line-height: 1.6;
             }
     
+            .notification-banner {
+                background: var(--accent);
+                color: white;
+                text-align: center;
+                padding: 0.75rem 1rem;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1001;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                transition: transform 0.3s ease;
+            }
+    
+            .notification-banner a {
+                color: white;
+                text-decoration: underline;
+                font-weight: 600;
+            }
+    
+            .notification-banner .close-button {
+                background: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+                padding: 0.25rem;
+                position: absolute;
+                right: 1rem;
+                font-size: 1.2rem;
+                opacity: 0.8;
+                transition: opacity 0.3s ease;
+            }
+    
+            .notification-banner .close-button:hover {
+                opacity: 1;
+            }
+    
             .nav-bar {
                 position: fixed;
-                top: 45px; /* Height of notification banner */
+                top: 48px; /* Height of notification banner */
                 left: 0;
                 width: 100%;
                 padding: 1rem 2rem;
@@ -88,7 +128,7 @@
                 justify-content: center;
                 position: relative;
                 overflow: hidden;
-                padding-top: 125px; /* Original 80px + banner height */
+                padding-top: 128px; /* Original 80px + notification height */
             }
     
             .hero-content {
@@ -164,6 +204,7 @@
                 min-height: 100vh;
                 padding: 6rem 0;
                 background-color: var(--navy-light);
+                scroll-margin-top: 120px; /* Approximately notification + navbar height */
             }
     
             .projects-grid {
@@ -240,6 +281,7 @@
                 min-height: 50vh;
                 padding: 6rem 0;
                 background-color: var(--navy);
+                scroll-margin-top: 120px; /* Approximately notification + navbar height */
             }
     
             .social-grid {
@@ -282,43 +324,6 @@
                 font-weight: 600;
             }
     
-            .notification-banner {
-                background: var(--accent);
-                color: white;
-                text-align: center;
-                padding: 0.75rem;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 1001;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
-            }
-    
-            .notification-banner a {
-                color: white;
-                font-weight: 600;
-                text-decoration: underline;
-            }
-    
-            .notification-banner .close-button {
-                background: none;
-                border: none;
-                color: white;
-                cursor: pointer;
-                padding: 0.25rem;
-                font-size: 1.2rem;
-                opacity: 0.8;
-                transition: opacity 0.2s ease;
-            }
-    
-            .notification-banner .close-button:hover {
-                opacity: 1;
-            }
-    
             @media (max-width: 768px) {
                 .nav-bar {
                     padding: 1rem;
@@ -346,6 +351,7 @@
     
                 .projects-section {
                     padding: 4rem 1rem;
+                    scroll-margin-top: 140px; /* Increased for mobile nav height */
                 }
     
                 .section-title {
@@ -368,6 +374,7 @@
     
                 .social-section {
                     padding: 4rem 1rem;
+                    scroll-margin-top: 140px; /* Increased for mobile nav height */
                 }
     
                 .social-grid {
@@ -380,10 +387,10 @@
                 }
     
                 .notification-banner {
-                    padding: 0.5rem;
+                    padding: 0.5rem 2.5rem 0.5rem 1rem;
                     font-size: 0.9rem;
                 }
-                
+    
                 header {
                     padding-top: 140px;
                 }
@@ -394,9 +401,8 @@
     </head>
     <body>
         <div class="notification-banner" id="notification">
-            <span>🚀 Check out my latest project - MineTimer!</span>
-            <a href="#projects">Learn More</a>
-            <button class="close-button" onclick="closeNotification()">×</button>
+            🚀 Check out my latest project! <a href="https://goofert.org/#projects">View it here</a>
+            <button class="close-button" aria-label="Close notification" onclick="closeNotification()">×</button>
         </div>
         
         <nav class="nav-bar">
@@ -549,12 +555,11 @@
 
             function closeNotification() {
                 const notification = document.getElementById('notification');
-                const navBar = document.querySelector('.nav-bar');
-                const header = document.querySelector('header');
+                notification.style.transform = 'translateY(-100%)';
             
-                notification.style.display = 'none';
-                navBar.style.top = '0';
-                header.style.paddingTop = '80px';
+                // Adjust nav-bar and header positions after notification is closed
+                document.querySelector('.nav-bar').style.top = '0';
+                document.querySelector('header').style.paddingTop = '80px';
             }
     
             initThree();
