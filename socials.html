@@ -1,0 +1,239 @@
+<html><head><base href="https://example.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goofert | Socials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #001f3f;
+            --navy-light: #183153;
+            --accent: #4a9eff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--navy);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(0, 31, 63, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            background: linear-gradient(45deg, var(--accent), #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .socials-container {
+            min-height: 100vh;
+            padding: 6rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--accent);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .social-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 15px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            color: var(--accent);
+        }
+
+        .social-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .social-username {
+            color: var(--accent);
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .social-description {
+            text-align: center;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .visit-button {
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .visit-button:hover {
+            background: #3b8de0;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar {
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .social-grid {
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .social-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-logo">GOOFERT</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="socials.html">Status</a>
+        </div>
+    </nav>
+
+    <div class="socials-container">
+        <h1 class="section-title">Check out my socials</h1>
+        <div class="social-grid">
+            <div class="social-card">
+                <svg class="social-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M23.498 6.186a2.99 2.99 0 0 0-2.106-2.106C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.392.58a2.99 2.99 0 0 0-2.106 2.106C0 8.078 0 12 0 12s0 3.922.502 5.814a2.99 2.99 0 0 0 2.106 2.106C4.5 20.5 12 20.5 12 20.5s7.5 0 9.392-.58a2.99 2.99 0 0 0 2.106-2.106C24 15.922 24 12 24 12s0-3.922-.502-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+                </svg>
+                <span class="social-name">YouTube</span>
+                <span class="social-username">@goofert42</span>
+                <a href="https://youtube.com/@goofert42" target="_blank" class="visit-button">Visit Social</a>
+            </div>
+
+            <div class="social-card">
+                <svg class="social-icon" viewBox="0 0 16 16" width="24" height="24">
+                    <path fill="currentColor" d="M3.857 0L1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429L11.286 9.714H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                    <path fill="currentColor" d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+                </svg>
+                <span class="social-name">Twitch</span>
+                <span class="social-username">@goofert42</span>
+                <a href="https://twitch.tv/goofert42" target="_blank" class="visit-button">Visit Social</a>
+            </div>
+
+            <div class="social-card">
+                <svg class="social-icon" viewBox="0 0 16 16" width="24" height="24">
+                    <path fill="currentColor" d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                </svg>
+                <span class="social-name">Discord</span>
+                <span class="social-username">.gg/u3NDJycP5v</span>
+                <a href="https://goofert.org/discord" target="_blank" class="visit-button">Join Server</a>
+            </div>
+
+            <div class="social-card">
+                <svg class="social-icon" viewBox="0 0 16 16" width="24" height="24">
+                    <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+                <span class="social-name">GitHub</span>
+                <span class="social-username">@goofert42</span>
+                <a href="https://github.com/goofert42" target="_blank" class="visit-button">Visit Social</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
