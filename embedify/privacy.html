@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goofert - Embedify Privacy Policy</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <style>
+        /* Previous styles remain the same */
+        :root {
+            --navy: #001f3f;
+            --navy-light: #183153;
+            --accent: #4a9eff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--navy);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(0, 31, 63, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            background: linear-gradient(45deg, var(--accent), #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Rest of the previous styles remain the same */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .brand-name {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--accent), #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, var(--accent), #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem;
+            font-weight: 600;
+        }
+
+        p {
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            opacity: 0.6;
+            margin-top: 3rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar {
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 8rem 1rem 2rem;
+            }
+
+            .brand-name {
+                font-size: 2.5rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="#" class="nav-logo">GOOFERT</a>
+        <div class="nav-links">
+            <a href="https://goofert.org/">Home</a>
+            <a href="https://goofert.org/#projects/">Projects</a>
+            <a href="https://status.goofert.org/" target="_blank">Status</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="page-title">Embedify - Privacy Policy</h2>
+
+        <section id="privacy">
+            <h2>Privacy Policy</h2>
+            <p>This Privacy Policy describes how we collect, use, and share your personal information when you use Embedify.</p>
+            
+            <h3>1. Data Collection</h3>
+            <p>Embedify may collect the following types of data:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;• User IDs and Server IDs to facilitate bot functionality.</p>
+            
+            <h3>2. Data Usage</h3>
+            <p>Data collected by Embedify is used solely to provide the bot’s features and ensure functionality. We do not sell, trade, or share your data with third parties unless required by law.</p>
+            
+            <h3>3. Data Storage</h3>
+            <p>Collected data is stored securely and retained for a short amount of time to provide the bot’s services.</p>
+            
+            <h3>4. Third-Party Services</h3>
+            <p>Embedify may use third-party services (e.g., hosting platforms, analytics) that may process data on our behalf. These services are bound by their own privacy policies.</p>
+            
+            <h3>4. Changes to Privacy Policy</h3>
+            <p>We may update this Privacy Policy at any time. Continued use of the bot constitutes acceptance of the revised terms.</p>
+
+            <h3>5. Your Rights</h3>
+            <p>You have the right to access, correct, or delete your personal information. You may also object to or restrict certain processing of your information, please contact us at goofert42@gmail.com</p>
+        </section>
+
+        <p class="last-updated">Last Updated: January 5, 2025</p>
+    </div>
+</body>
+</html>
