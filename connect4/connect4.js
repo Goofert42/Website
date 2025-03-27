@@ -10,6 +10,8 @@ var rows = 6;
 var columns = 7;
 
 window.onload = function() {
+    console.log("JS Loaded!")
+    
     let playerDot = document.getElementById("playerDot");
     let turnText = document.getElementById("turnText");
 
